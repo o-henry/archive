@@ -1,0 +1,23 @@
+type File {
+    id: ID!
+    name: String!
+    type: Type!
+    size: Int!
+    metadata: Metadata!
+    # createdAt: DateTime
+}
+
+type Type {
+    id: ID!
+}
+
+type Metadata {
+    id: ID!
+}
+
+# The Root Query for the application
+type Query {
+    files: [File]!
+}
+
+# The Root Mutation for the application
