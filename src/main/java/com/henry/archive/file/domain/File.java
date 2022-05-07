@@ -1,5 +1,6 @@
 package com.henry.archive.file.domain;
 
+import java.util.Date;
 import lombok.Getter;
 
 
@@ -7,26 +8,21 @@ import lombok.Getter;
 public class File {
 
   private final String id;
-  private final Boolean key;
-
+  private Boolean hidden;
   private String size;
-  private String type;
-  private String timestamp;
-  private String metadata;
+  private FileType type;
+  private Date timestamp;
+  private Metadata metadata;
 
-  public File(String id, Boolean key) {
+  private File(String id, Boolean hidden) {
     this.id = id;
-    this.key = key;
+    this.hidden = hidden;
   }
 
 
-  public static File withKey(String id, boolean key) {
-    return new File(id, key);
+  //Factory pattern
+  public static File withId(String id, boolean hidden) {
+    return new File(id, hidden);
   }
-
-  public static File withoutKey(String id) {
-    return new File(id, null);
-  }
-  
-
 }
+
