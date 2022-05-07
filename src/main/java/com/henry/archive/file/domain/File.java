@@ -9,7 +9,7 @@ public class File {
   private final String id;
   private final Boolean hidden;
   private FileType type;
-  private Metadata metadata; // size, timestamp, name
+  private Metadata metadata;
 
 
   private File(String id, Boolean hidden) {
