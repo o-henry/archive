@@ -5,6 +5,7 @@ import com.henry.archive.file.domain.Metadata;
 import javax.validation.constraints.NotNull;
 import lombok.EqualsAndHashCode;
 
+// TODO: validate input
 @EqualsAndHashCode(callSuper = false)
 public class UploadFileCommand {
 
@@ -18,7 +19,6 @@ public class UploadFileCommand {
   private final Metadata metadata;
 
 
-  // TODO: validate input
   public UploadFileCommand(
       String id,
       Boolean hidden,
