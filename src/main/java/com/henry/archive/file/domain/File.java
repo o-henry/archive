@@ -1,6 +1,5 @@
 package com.henry.archive.file.domain;
 
-import java.util.Date;
 import lombok.Getter;
 
 
@@ -8,11 +7,10 @@ import lombok.Getter;
 public class File {
 
   private final String id;
-  private Boolean hidden;
-  private String size;
+  private final Boolean hidden;
   private FileType type;
-  private Date timestamp;
-  private Metadata metadata;
+  private Metadata metadata; // size, timestamp, name
+
 
   private File(String id, Boolean hidden) {
     this.id = id;

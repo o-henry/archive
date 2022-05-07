@@ -16,5 +16,4 @@ public class GetFileService implements GetFileQuery {
     return null;
   }
 
-  // TODO: find file by hidden value
 }
