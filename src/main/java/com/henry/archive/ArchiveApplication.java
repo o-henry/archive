@@ -1,9 +1,6 @@
 package com.henry.archive;
 
 import com.henry.archive.file.adapter.out.persistence.FileRepository;
-import com.henry.archive.file.domain.File;
-import com.henry.archive.file.domain.FileType;
-import com.henry.archive.file.domain.Metadata;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -24,7 +21,14 @@ public class ArchiveApplication {
   @Bean
   public CommandLineRunner console(FileRepository repository) {
     return (args) -> {
-      repository.save(File.create("1", false, new Metadata("tester", FileType.PNG, "44")));
+//      repository.save(File.withId("1", false, new Metadata("tester", FileType.PNG, "44")));
+//
+//      log.info("File found with findAll():");
+//      log.info("--------------------------");
+//
+//      repository.findAll().forEach((file) -> {
+//        log.info(file.getMetadata().name());
+//      });
     };
   }
 

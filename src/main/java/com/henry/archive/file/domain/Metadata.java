@@ -2,11 +2,12 @@ package com.henry.archive.file.domain;
 
 import java.util.Objects;
 
-public record Metadata(String name, FileType type, String size) {
+public record Metadata(FileType type, Long size) {
 
   public Metadata {
-    Objects.requireNonNull(name);
     Objects.requireNonNull(type);
     Objects.requireNonNull(size);
   }
+
+
 }
