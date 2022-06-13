@@ -12,13 +12,11 @@ public class File {
   @Getter
   private final Metadata metadata;
 
-
-  private File(String id, Boolean hidden, Metadata metadata) {
+  File(String id, Boolean hidden, Metadata metadata) {
     this.id = id;
     this.hidden = hidden;
     this.metadata = metadata;
   }
-
 
   public static File withKey(String id, boolean hidden, Metadata metadata) {
     return new File(id, hidden, metadata);

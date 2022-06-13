@@ -11,6 +11,5 @@ class FileTest {
     //when
 
     //then
-
   }
 }
